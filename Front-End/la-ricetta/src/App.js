@@ -1,26 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Sidenav from './components/sidenav';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './components/Navbar';  // Correct path
+import AppRoutes from './routes/Routes';
 
-const App = () => {
+function App() {
   return (
-    <Router> 
-            <Navbar></Navbar>
-      <div style={{ display: 'flex' }}>
-        {/* <Sidenav /> */}
-        <div style={{ marginLeft: '250px', padding: '20px', width: '100%' }}>
-          <Routes>
-            <Route path="/charts/pie" element={<h2>Latest Recipes</h2>} />
-            <Route path="/charts/line" element={<h2>Top Rated Recipes</h2>} />
-            <Route path="/documentation" element={<h2>How To Add Recipes</h2>} />
-            <Route path="/calendar" element={<h2>Terms and Conditions</h2>} />
-            <Route path="/e-commerce" element={<h2>F&Q</h2>} />
-          </Routes>
-        </div>
-      </div>
+    <Router>
+      <Navbar />  {/* Ensure Navbar is placed here */}
+      <br/>
+      <AppRoutes />  {/* Routes will render below Navbar */}
     </Router>
   );
-};
+}
 
 export default App;

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-* {
+header {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,7 @@ body {
   background: url('../assets/bg1.jpg') no-repeat;
   background-size: cover;
   background-position: center;
+  /* overflow: hidden; */
 }
 
 .header {
@@ -54,8 +55,8 @@ body {
 } */
 
 .logo {
-  width: 120px;
-  height: 80px;
+  width: 100px;
+  height: 60px;
   object-fit: contain;
 }
 
@@ -82,6 +83,42 @@ body {
   font-size: 2.8rem;
   color: white;
   cursor: pointer;
+}
+
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+}
+
+.profile-dropdown a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: background 0.3s;
+}
+
+.profile-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 992px) {
@@ -122,7 +159,7 @@ body {
   }
 
   #check:checked ~ .navbar {
-    max-height: 17.7rem; /* Set the expanded height */
+    max-height: 25rem; /* Set the expanded height */
   }
 
   .navbar a {
@@ -155,5 +192,12 @@ body {
 
   .navbar a:nth-child(4) {
     transition-delay: 0.6s;
+  }
+
+  .profile {
+    display: block;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
   }
 }
