@@ -26,8 +26,8 @@ const Navbar = () => {
         </label>
 
         <nav className='navbar'>
-          <a href="#" style={{ '--i': 0 }}>Home</a>
-          <a href="#" style={{ '--i': 1 }}>About</a>
+          <a href="/" style={{ '--i': 0 }}>Home</a>
+          <a href="About" style={{ '--i': 1 }}>About</a>
           <a href="#" style={{ '--i': 2 }}>Add Recipes</a>
           <a href="#" style={{ '--i': 3 }}>F&Q</a>
 
