@@ -5,42 +5,45 @@ import Logo from '../assets/Logo.png';
 import 'boxicons/css/boxicons.min.css';
 
 const Navbar = () => {
-
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleProfile = () => setIsProfileOpen(!isProfileOpen);
 
   return (
     <div>
       <header className='header'>
-        <a href="/">
+        {/* Logo */}
+        <Link to="/">
           <img src={Logo} alt="La Ricetta Logo" className="logo" />
-        </a>
+        </Link>
 
-        <input type='checkbox' id='check'></input>
-        <label htmlFor="check" className='icons'>
-          <i className='bx bx-menu' id='menu-icon'></i>
-          <i className='bx bx-x' id='close-icon'></i>
+        {/* Mobile Menu Toggle */}
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="icons">
+          <i className="bx bx-menu" id="menu-icon"></i>
+          <i className="bx bx-x" id="close-icon"></i>
         </label>
 
-        <nav className='navbar'>
-          <a href="/" style={{ '--i': 0 }}>Home</a>
-          <a href="About" style={{ '--i': 1 }}>About</a>
-          <a href="#" style={{ '--i': 2 }}>Add Recipes</a>
-          <a href="#" style={{ '--i': 3 }}>F&Q</a>
+        {/* Navbar Links */}
+        <nav className="navbar">
+          <Link to="/" style={{ '--i': 0 }}>Home</Link>
+          <Link to="/about" style={{ '--i': 1 }}>About</Link>
+          <Link to="/add-recipes" style={{ '--i': 2 }}>Add Recipes</Link>
+          <Link to="/faq" style={{ '--i': 3 }}>F&Q</Link>
 
-        <div className="profile" style={{ '--i': 4 }} onClick={toggleProfile}>
-          <i className='bx bx-user'></i>
-          {isProfileOpen && (
-            <div className="profile-dropdown">
-              <a href="#">My Profile</a>
-              <a href="#">Settings</a>
-              <a href="#">Logout</a>
-            </div>
-          )}
-        </div>
+          {/* Profile Dropdown */}
+          <div className="profile" style={{ '--i': 4 }} onClick={toggleProfile}>
+            <i className="bx bx-user"></i>
+            {isProfileOpen && (
+              <div className="profile-dropdown">
+                <Link to="/profile">My Profile</Link>
+                <Link to="/settings">Settings</Link>
+                <button onClick={() => console.log("Logout clicked")}>
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
         </nav>
       </header>
     </div>
