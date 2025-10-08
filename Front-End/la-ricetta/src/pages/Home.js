@@ -3,13 +3,12 @@ import './Home.css';
 import Fastfood from '../assets/fast food.jpg';
 import StreetFood from '../assets/street food.jpg';
 import Desserts from '../assets/dessert.jpg';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-
+import { useNavigate } from 'react-router-dom'; 
 const Home = () => {
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const handleMoreRecipes = () => {
-    navigate('/menu'); // Navigate to the menu page
+    navigate('/menu'); 
   };
 
   return (
