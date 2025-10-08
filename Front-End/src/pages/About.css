@@ -1,6 +1,11 @@
-@import '../components/Footer.css'; /* import variables to keep palette consistent if needed */
+@import '../components/Footer.css'; 
 
-.about-page{min-height:70vh;color:var(--lr-white);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial}
+.about-page {
+  min-height: 70vh;
+  color: var(--lr-white);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  padding-top: 100px; 
+}
 
 .about-hero{padding:72px 20px;background:linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.46));display:flex;align-items:center;justify-content:center}
 .about-hero__inner{max-width:1000px;text-align:center}

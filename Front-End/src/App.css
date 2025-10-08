@@ -1,3 +1,7 @@
+main {
+  padding-top: 100px; /* adjust to match your navbar height */
+}
+
 .App {
   text-align: center;
 }
