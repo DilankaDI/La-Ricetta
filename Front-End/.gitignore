@@ -3,7 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-/la-ricetta
 .pnp.js
 
 # testing
