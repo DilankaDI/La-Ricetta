@@ -1,0 +1,66 @@
+@import '../components/Footer.css'; /* reuse variables */
+
+.recipes-page{padding:28px 18px 80px;color:var(--lr-white);min-height:60vh;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial}
+
+.recipes-hero{max-width:1100px;margin:0 auto 22px;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;box-shadow:0 10px 30px rgba(10,10,10,0.12);}
+.recipes-hero__inner h2{margin:6px 0 6px;font-size:22px}
+.recipes-hero__inner .muted{color:rgba(255, 255, 255, 0.87)}
+
+.recipes-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;max-width:1100px;margin:18px auto}
+
+.recipes-form{background:linear-gradient(180deg, rgba(255, 255, 255, 0.219), rgba(255, 255, 255, 0.203));padding:20px;border-radius:14px;box-shadow:0 18px 44px rgba(10,10,10,0.12);border:1px solid rgba(255,255,255,0.035)}
+.field-row{display:flex;gap:12px}
+.field{flex:1;display:flex;flex-direction:column;margin-bottom:12px}
+.field label{font-size:13px;color:rgba(255, 255, 255, 0.875);margin-bottom:6px}
+.field input,.field select{
+  padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);
+  background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  color:var(--lr-white);outline:none;transition:box-shadow .15s ease,transform .12s ease,background .12s ease;
+  box-shadow: 0 6px 18px rgba(2,6,12,0.18);
+}
+
+/* Custom select styles (styled option list) */
+.custom-select{position:relative;display:inline-block;width:100%}
+.custom-select__control{width:100%;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));color:var(--lr-white);cursor:pointer;box-shadow: 0 6px 18px rgba(2,6,12,0.18)}
+.custom-select__control:focus{outline:none;box-shadow:0 14px 36px rgba(2,6,12,0.22);transform:translateY(-2px);background:linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04))}
+.custom-select__value{font-size:14px}
+.custom-select__arrow{margin-left:8px;transition:transform .18s ease}
+.custom-select__arrow.open{transform:rotate(180deg)}
+.custom-select__list{position:absolute;right:0;left:0;z-index:80;margin-top:8px;border-radius:10px;background:linear-gradient(180deg, rgba(10,12,14,0.96), rgba(6,8,10,0.94));box-shadow:0 30px 80px rgba(2,6,12,0.5);border:1px solid rgba(255,255,255,0.06);max-height:220px;overflow:auto;padding:8px}
+.custom-select__option{padding:10px 12px;border-radius:8px;color:var(--lr-white);cursor:pointer}
+.custom-select__option:hover{background:rgba(255,255,255,0.03)}
+.custom-select__option.selected{background:linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.06)}
+
+.field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.8) 50%),linear-gradient(135deg, rgba(255,255,255,0.8) 50%, transparent 50%);background-position:calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:38px}
+.field select:focus{background-image:linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.95) 50%),linear-gradient(135deg, rgba(255,255,255,0.95) 50%, transparent 50%)}
+.field input::placeholder{color:rgba(255,255,255,0.6)}
+.field input:focus,.field select:focus{box-shadow:0 14px 36px rgba(2,6,12,0.22);transform:translateY(-2px);background:linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04))}
+
+.tags-input{display:flex;gap:8px}
+.tag-list{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:6px 10px;border-radius:999px;cursor:pointer;font-size:13px;border:1px solid rgba(255,255,255,0.04)}
+
+.form-actions{display:flex;gap:12px;margin-top:8px}
+.btn{background:var(--lr-olive);color:var(--lr-white);border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+.btn.primary{box-shadow:0 10px 28px rgba(10,30,20,0.12)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.btn.small{padding:6px 10px;border-radius:8px}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:8px}
+
+.recipes-preview{position:relative}
+.preview-card{border-radius:14px;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));box-shadow:0 30px 80px rgba(5,10,15,0.30);border:1px solid rgba(255,255,255,0.08);transform:translateZ(0);transition:transform .22s cubic-bezier(.2,.9,.2,1),box-shadow .2s ease}
+.preview-card:hover{transform:translateY(-10px) translateZ(16px);box-shadow:0 40px 100px rgba(5,10,15,0.38)}
+.preview-image{height:150px;background:linear-gradient(135deg, rgba(20,20,20,0.14), rgba(8,8,8,0.48));display:block;position:relative}
+.preview-image::after{content:'';position:absolute;left:0;right:0;top:0;height:100%;background:linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.22));mix-blend-mode:multiply}
+.preview-body{padding:14px}
+.preview-body h3{margin:0 0 6px;color:var(--lr-olive)}
+.preview-body .muted{color:rgba(255,255,255,0.9)}
+.preview-chips{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;font-size:13px}
+.chip{background:linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.05)}
+.cta-row{display:flex;gap:8px;margin-top:12px}
+
+@media (max-width:980px){
+  .recipes-grid{grid-template-columns:1fr}
+  .recipes-hero{padding:14px}
+}

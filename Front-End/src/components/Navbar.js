@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav className="navbar">
           <Link to="/" style={{ '--i': 0 }}>Home</Link>
           <Link to="/about" style={{ '--i': 1 }}>About</Link>
-          <Link to="/add-recipes" style={{ '--i': 2 }}>Add Recipes</Link>
+          <Link to="/Recipes" style={{ '--i': 2 }}>Add Recipes</Link>
           <Link to="/faq" style={{ '--i': 3 }}>F&Q</Link>
 
           {/* Profile Dropdown */}
