@@ -3,7 +3,7 @@
 .recipes-page{
   padding:28px 18px 80px;color:var(--lr-white);min-height:60vh;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
   /* page background from public/assets */
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('../assets/bg5.jpg');
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('../assets/bg6.jpg');
   background-size: cover;
   background-position: center;
   -webkit-font-smoothing:antialiased;
@@ -22,13 +22,54 @@
 .centered{max-width:900px;margin:26px auto;padding:0 18px}
 .recipes-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;margin:0}
 
-.recipes-form{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));padding:20px;border-radius:14px;box-shadow:0 18px 44px rgba(10,10,10,0.12);border:1px solid rgba(255,255,255,0.035)}
-.field-row{display:flex;gap:12px}
+.recipes-form{background:linear-gradient(180deg, rgba(0, 0, 0, 0.626), rgba(0, 0, 0, 0.588));padding:26px;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,0.6);border:1px solid rgba(255, 255, 255, 0.462)}
+.section{margin-bottom:18px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255, 255, 255, 0.086), rgba(255, 255, 255, 0.125));border:1px solid rgba(255, 255, 255, 0.158)}
+.section-title{font-weight:700;margin-bottom:12px;color:var(--lr-white);font-size:16px}
+.chip-input{display:flex;gap:8px;align-items:center}
+.chip-input input{flex:1;padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255, 255, 255, 0.467)}
+
+/* Inputs: stronger contrast so fields are readable on busy backgrounds */
+.field input,.field select, .field textarea,.icon-input input{padding:14px;border-radius:12px;border:1px solid rgba(255, 255, 255, 0.368);background:linear-gradient(180deg, rgba(255, 255, 255, 0.374), rgba(255, 255, 255, 0.445));color:var(--lr-white);box-shadow:inset 0 4px 12px rgba(0,0,0,0.4)}
+.field label{color:rgba(255,255,255,0.95)}
+
+/* Make field rows align center for better layout */
+.field-row{display:flex;gap:18px;align-items:center}
+
+/* Steps details and textarea styling to look consistent */
+.step-item{background:transparent;border-radius:8px;padding:8px;margin-bottom:8px}
+.step-item summary{font-weight:600;cursor:pointer;margin-bottom:8px}
+.step-item textarea{min-height:80px;padding:12px;border-radius:10px;border:1px solid rgba(255, 255, 255, 0.385);background:linear-gradient(180deg, rgba(255, 255, 255, 0.358), rgba(255, 255, 255, 0.336));color:var(--lr-white)}
+
+/* Make dropdown control visually consistent with inputs */
+.custom-select__control{background:linear-gradient(180deg, rgba(255, 255, 255, 0.386), rgba(255, 255, 255, 0.293));border:1px solid rgba(255, 255, 255, 0.386);}
+.custom-select__arrow{color:var(--lr-white)}
+
+/* Improve pink dropdown option contrast and selected state */
+.custom-select__list{box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+.custom-select__option{padding:14px;border-radius:10px;color:#fff}
+.custom-select__option.selected{background:linear-gradient(180deg,#FFC0C0,#FFCCCC);color:#fff;font-weight:700}
+
+/* Delete button more distinct (destructive) */
+.icon-btn.delete{background:rgba(255,60,85,0.12);color:#ffb3c7;border:1px solid rgba(255,60,85,0.12)}
+
+/* Upload area: make it clearer */
+.upload-area{border:2px dashed rgba(255, 255, 255, 0.411);background:linear-gradient(180deg, rgba(255, 255, 255, 0.422), rgba(255, 255, 255, 0.378));padding:18px;border-radius:12px;text-align:center;cursor:pointer}
+.upload-area .upload-inner{color:rgba(255,255,255,0.85)}
+
+/* Thumbs spacing and border */
+.thumb{position:relative;width:96px;height:96px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.45);border:1px solid rgba(255, 255, 255, 0.345)}
+
+/* Actions: move reset into ghost button and space out */
+.form-actions{display:flex;gap:12px;margin-top:18px;align-items:center}
+.reset{margin-left:auto;color:rgba(255,255,255,0.85)}
+.field-row{display:flex;gap:12px;align-items:end}
 .field{flex:1;display:flex;flex-direction:column;margin-bottom:12px}
+.field.servings{flex:0 0 110px;display:flex;flex-direction:column}
+.field.servings input{padding:10px 12px;border-radius:10px;text-align:center}
 .field label{font-size:13px;color:rgba(255, 255, 255, 0.875);margin-bottom:6px}
 .field input,.field select, .field textarea{
-  padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);
-  background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  padding:16px;border-radius:12px;border:1px solid rgba(255, 255, 255, 0.251);
+  background:linear-gradient(180deg, rgba(255, 255, 255, 0.249), rgba(255, 255, 255, 0.222));
   color:var(--lr-white);outline:none;transition:box-shadow .15s ease,transform .12s ease,background .12s ease;
   box-shadow: inset 0 4px 10px rgba(0,0,0,0.18), 0 6px 18px rgba(2,6,12,0.12);
 }
@@ -44,12 +85,12 @@
 
 /* Custom select styles (styled option list) */
 .custom-select{position:relative;display:inline-block;width:100%}
-.custom-select__control{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));color:var(--lr-white);cursor:pointer;box-shadow: inset 0 4px 10px rgba(0,0,0,0.12);}
-.custom-select__control:focus{outline:none;box-shadow:0 14px 36px rgba(2,6,12,0.22);transform:translateY(-2px);background:linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04))}
+.custom-select__control{width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:12px;border:1px solid rgba(255, 255, 255, 0.267);background:linear-gradient(180deg, rgba(255, 255, 255, 0.223), rgba(255, 255, 255, 0.256));color:var(--lr-white);cursor:pointer;box-shadow: inset 0 4px 10px rgba(0,0,0,0.12);}
+.custom-select__control:focus{outline:none;box-shadow:0 14px 36px rgba(2,6,12,0.22);transform:translateY(-2px);background:linear-gradient(180deg, rgba(255, 255, 255, 0.244), rgba(255, 255, 255, 0.233))}
 .custom-select__value{font-size:14px}
 .custom-select__arrow{margin-left:8px;transition:transform .18s ease}
 .custom-select__arrow.open{transform:rotate(180deg)}
-.custom-select__list{position:absolute;right:0;left:0;z-index:80;margin-top:8px;border-radius:12px;background:linear-gradient(180deg,#FF4D87 0%, #FF9AB8 100%);box-shadow:0 30px 80px rgba(2,6,12,0.5);border:1px solid rgba(255,255,255,0.06);max-height:260px;overflow:auto;padding:8px}
+.custom-select__list{position:absolute;right:0;left:0;z-index:80;margin-top:8px;border-radius:12px;background:linear-gradient(180deg,#FFC0C0  0%, #FFCCCC 100%);color:black;box-shadow:0 30px 80px rgba(2,6,12,0.5);border:1px solid rgba(255,255,255,0.06);max-height:260px;overflow:auto;padding:8px}
 .custom-select__option{padding:12px;border-radius:8px;color:var(--lr-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
 .custom-select__option:hover{background:rgba(255,255,255,0.06);color:var(--lr-white)}
 .custom-select__option.selected{font-weight:700}
@@ -128,8 +169,8 @@
 
 /* ensure consistent spacing for pill & tag controls */
 .pill-radio{display:flex;gap:8px}
-.pill{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer}
-.pill.active{box-shadow:0 8px 28px rgba(61,153,112,0.12);background:linear-gradient(90deg, rgba(61,153,112,0.12), rgba(118,199,149,0.08));}
+.pill{padding:8px 12px;border-radius:999px;background:transparent;border:1px solid rgba(255, 255, 255, 0.314);cursor:pointer}
+.pill.active{box-shadow:0 8px 28px rgba(7, 93, 54, 0.762);background:linear-gradient(90deg, rgba(8, 102, 59, 0.685), rgb(5, 101, 41));}
 
 /* spacing helpers */
 .mt8{margin-top:8px}
@@ -140,7 +181,7 @@
 .recipes-form .btn + .btn{margin-left:8px}
 
 /* pills & tags */
-.tag-pill{background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,0.04);margin-right:8px}
+.tag-pill{background:linear-gradient(90deg, rgba(255, 255, 255, 0.152), rgba(255, 255, 255, 0.152));padding:6px 10px;border-radius:999px;border:1px solid rgba(255, 255, 255, 0.174);margin-right:8px}
 .difficulty{background:linear-gradient(90deg,var(--lr-olive),#76c795);padding:6px 10px;border-radius:999px;color:#fff;font-weight:700}
 
 /* success modal */
