@@ -1,17 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/Navbar';  // Correct path
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AppRoutes from './routes/Routes';
-
+import './App.css'; // make sure this exists and contains responsive styles
 
 function App() {
   return (
     <Router>
-      <Navbar />  {/* Ensure Navbar is placed here */}
-      <br/>
-      <AppRoutes />  {/* Routes will render below Navbar */}
-      <Footer/>
+      <div className="app-container">
+        <Navbar />
+        <main className="content">
+          <AppRoutes />
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
