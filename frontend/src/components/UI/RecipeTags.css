@@ -1,0 +1,141 @@
+.recipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.recipe-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.recipe-tag.clickable {
+  cursor: pointer;
+}
+
+.recipe-tag.clickable:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.tag-default {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.tag-primary {
+  background-color: #e67e22;
+  color: white;
+}
+
+.tag-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.tag-warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.tag-info {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.tag-more {
+  background-color: #e5e7eb;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.tag-text {
+  line-height: 1;
+}
+
+.tag-remove {
+  background: none;
+  border: none;
+  color: currentColor;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  line-height: 1;
+}
+
+.tag-remove:hover {
+  opacity: 1;
+}
+
+.tag-input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tag-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 120px;
+}
+
+.tag-input:focus {
+  border-color: #e67e22;
+  box-shadow: 0 0 0 2px rgba(230, 126, 34, 0.1);
+}
+
+.tag-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tag-suggestion {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.tag-suggestion:hover {
+  background-color: #f3f4f6;
+}
+
+@media (max-width: 768px) {
+  .recipe-tags {
+    gap: 0.375rem;
+  }
+  
+  .recipe-tag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .tag-remove {
+    font-size: 0.6875rem;
+  }
+}
