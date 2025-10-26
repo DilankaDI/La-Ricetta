@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./profile.css";
+import "./Profile.css";
 import { FaStar, FaRegBookmark, FaBookmark } from "react-icons/fa";
 
 const Profile = () => {
