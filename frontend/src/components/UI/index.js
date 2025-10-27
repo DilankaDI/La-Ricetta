@@ -4,4 +4,6 @@
 export { default as SkeletonLoader } from './SkeletonLoader';
 export { default as LoadingSpinner } from './LoadingSpinner';
 export { default as RecipeTags, TagInput } from './RecipeTags';
+export { default as LoadingSpinner } from './LoadingSpinner';
+export { default as SearchBar } from './SearchBar';
 // ...other existing UI component exports if any...
