@@ -1,0 +1,203 @@
+.menu-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  color: #fff;
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.menu-subtitle {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.menu-category-list {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu-category-btn {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-category-btn:hover {
+  background-color: #3b3b3b;
+  color: #fff;
+}
+
+.menu-category-btn.active {
+  background-color: #facc15;
+  color: #000;
+}
+
+.menu-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Recipe Card */
+.menu-recipe-card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-recipe-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card-content {
+  padding: 15px;
+}
+
+.menu-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.menu-card-desc {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Modal */
+.menu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.menu-modal {
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.menu-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.menu-modal-close:hover {
+  color: white;
+}
+
+.menu-modal-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.menu-modal-desc {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.menu-modal-subtitle {
+  font-weight: 600;
+  color: #facc15;
+  margin-top: 15px;
+}
+
+.menu-modal-list {
+  margin-left: 20px;
+  color: #ddd;
+}
+
+.menu-modal-text {
+  color: #ccc;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* Pagination */
+.menu-pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-page-btn {
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-page-btn:hover {
+  background-color: #3b3b3b;
+}
+
+.menu-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.menu-page-info {
+  color: #aaa;
+  font-size: 0.9rem;
+}

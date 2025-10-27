@@ -53,7 +53,6 @@ const Profile = () => {
     },
   ];
 
-  // Example saved recipes (different list)
   const savedRecipes = [
     {
       id: 101,
@@ -74,21 +73,21 @@ const Profile = () => {
   const displayRecipes = activeTab === "myRecipes" ? myRecipes : savedRecipes;
 
   return (
-    <div className="profile-container">
-      <div className="profile-header">
+    <div className="p-profile-container">
+      <div className="p-profile-header">
         <img
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
           alt="Profile"
-          className="profile-avatar"
+          className="p-profile-avatar"
         />
-        <div className="profile-info">
+        <div className="p-profile-info">
           <h1>Elena Garcia</h1>
-          <p className="username">@elena_the_foodie</p>
-          <p className="bio">
+          <p className="p-username">@elena_the_foodie</p>
+          <p className="p-bio">
             Passionate home cook exploring global cuisines. Follow for delicious,
             easy-to-make recipes! 🌍🍳🧁
           </p>
-          <div className="stats">
+          <div className="p-stats">
             <span><strong>47</strong> Recipes</span>
             <span><strong>12.5k</strong> Followers</span>
             <span><strong>210</strong> Following</span>
@@ -96,7 +95,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="tabs">
+      <div className="p-tabs">
         <button
           className={activeTab === "myRecipes" ? "active" : ""}
           onClick={() => setActiveTab("myRecipes")}
@@ -111,23 +110,23 @@ const Profile = () => {
         </button>
       </div>
 
-      <div className="recipes-grid">
+      <div className="p-recipes-grid">
         {displayRecipes.map((recipe) => (
-          <div className="recipe-card" key={recipe.id}>
+          <div className="p-recipe-card" key={recipe.id}>
             <img src={recipe.image} alt={recipe.title} />
-            <div className="recipe-info">
+            <div className="p-recipe-info">
               <h3>{recipe.title}</h3>
-              <div className="recipe-meta">
-                <span className="rating">
-                  <FaStar className="star" /> {recipe.rating}
+              <div className="p-recipe-meta">
+                <span className="p-rating">
+                  <FaStar className="p-star" /> {recipe.rating}
                 </span>
-                <span className="saves">
+                <span className="p-saves">
                   {recipe.saves.toLocaleString()} saves
                 </span>
               </div>
             </div>
             <button
-              className="save-btn"
+              className="p-save-btn"
               onClick={() => toggleSave(recipe.id)}
             >
               {saved[recipe.id] ? <FaBookmark /> : <FaRegBookmark />}
@@ -136,8 +135,8 @@ const Profile = () => {
         ))}
 
         {activeTab === "myRecipes" && (
-          <div className="add-card">
-            <div className="add-icon">+</div>
+          <div className="p-add-card">
+            <div className="p-add-icon">+</div>
             <p>Add New Recipe</p>
           </div>
         )}
