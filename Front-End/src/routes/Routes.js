@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Recipes from '../pages/Recipes';
 import Profile from '../pages/Profile';
 import Settings from '../pages/settings';
+import Menu from '../pages/Menu';
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/recipes" element={<Recipes />} />
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/settings" element={<Settings/>} />
+      <Route path="/menu" element={<Menu/>} />
       {/* Add other routes here */}
     </Routes>
   );
