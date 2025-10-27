@@ -6,6 +6,7 @@ import Recipes from '../pages/Recipes';
 import Profile from '../pages/Profile';
 import Settings from '../pages/settings';
 import Menu from '../pages/Menu';
+import Faq from '../pages/faq';
 
 const AppRoutes = () => {
   return (
@@ -16,6 +17,7 @@ const AppRoutes = () => {
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/settings" element={<Settings/>} />
       <Route path="/menu" element={<Menu/>} />
+      <Route path="/faq" element={<Faq/>} />
       {/* Add other routes here */}
     </Routes>
   );
