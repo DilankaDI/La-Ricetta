@@ -1,0 +1,88 @@
+.s-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3a3837, #000000);
+  font-family: "Poppins", sans-serif;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.s-box {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+}
+
+.s-title {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.s-subtext {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.s-form {
+  text-align: left;
+}
+
+.s-field {
+  margin-bottom: 20px;
+}
+
+.s-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.s-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.s-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.s-btn:hover {
+  background-color: #1e63d6;
+}
+
+.s-switch {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.s-switch a {
+  color: #2575fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.s-switch a:hover {
+  text-decoration: underline;
+}

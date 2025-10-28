@@ -8,6 +8,7 @@ import Settings from '../pages/settings';
 import Menu from '../pages/Menu';
 import Faq from '../pages/faq';
 import Login from '../pages/Login';
+import Signup from '../pages/Signup';
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,8 @@ const AppRoutes = () => {
       <Route path="/menu" element={<Menu/>} />
       <Route path="/faq" element={<Faq/>} />
       <Route path="/login" element={<Login/>} />
+      <Route path="/signup" element={<Signup/>} />
+
       {/* Add other routes here */}
     </Routes>
   );
