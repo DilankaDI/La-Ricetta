@@ -1,0 +1,88 @@
+.l-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3a3837, #000000);
+  font-family: "Poppins", sans-serif;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.l-box {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+}
+
+.l-title {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.l-subtext {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.l-form {
+  text-align: left;
+}
+
+.l-field {
+  margin-bottom: 20px;
+}
+
+.l-field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.l-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.l-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7043;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.l-btn:hover {
+  background-color: #e85c2b;
+}
+
+.l-switch {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.l-switch a {
+  color: #ff7043;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.l-switch a:hover {
+  text-decoration: underline;
+}
