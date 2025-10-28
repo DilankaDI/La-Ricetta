@@ -30,6 +30,7 @@ const Navbar = () => {
           <Link to="/about" style={{ '--i': 1 }}>About</Link>
           <Link to="/Recipes" style={{ '--i': 2 }}>Add Recipes</Link>
           <Link to="/faq" style={{ '--i': 3 }}>F&Q</Link>
+          <Link to="/Login" style={{ '--i': 4 }}>Login</Link>
 
           {/* Profile Dropdown */}
           <div className="profile" style={{ '--i': 4 }} onClick={toggleProfile}>
