@@ -14,6 +14,9 @@ const recipeCategories = [
   "Salad",
   "Breakfast",
   "Vegan",
+  "Dinner",
+  "Indian",
+  "Sri Lankan",
 ];
 
 const MenuPage = () => {
