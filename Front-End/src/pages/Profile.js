@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Profile.css";
 import { FaStar, FaRegBookmark, FaBookmark } from "react-icons/fa";
 
 const Profile = () => {
   const [activeTab, setActiveTab] = useState("myRecipes");
   const [saved, setSaved] = useState({});
+  const navigate = useNavigate();
 
   const toggleSave = (id) => setSaved((prev) => ({ ...prev, [id]: !prev[id] }));
 
@@ -135,7 +137,11 @@ const Profile = () => {
         ))}
 
         {activeTab === "myRecipes" && (
-          <div className="p-add-card">
+          <div
+            className="p-add-card"
+            onClick={() => navigate("/recipes")}
+            style={{ cursor: "pointer" }}
+          >
             <div className="p-add-icon">+</div>
             <p>Add New Recipe</p>
           </div>
