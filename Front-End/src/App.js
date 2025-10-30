@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AppRoutes from './routes/Routes';
-import './App.css'; // make sure this exists and contains responsive styles
+import './App.css';
 
 function App() {
   return (

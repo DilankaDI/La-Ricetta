@@ -9,6 +9,9 @@ import Menu from '../pages/Menu';
 import Faq from '../pages/faq';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
+import AdminDashboard from "./admin/AdminDashboard";
+import ManageUsers from "./admin/ManageUsers";
+import ManageRecipes from "./admin/ManageRecipes";
 
 const AppRoutes = () => {
   return (
@@ -22,6 +25,9 @@ const AppRoutes = () => {
       <Route path="/faq" element={<Faq/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/users" element={<ManageUsers />} />
+      <Route path="/admin/recipes" element={<ManageRecipes />} />
 
       {/* Add other routes here */}
     </Routes>
