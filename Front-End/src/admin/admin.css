@@ -102,3 +102,40 @@
 .admin-logout-btn:hover {
   background: #cc0000;
 }
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+  background: #222;
+  color: white;
+}
+
+.admin-table tr:hover {
+  background: #f1f1f1;
+}
+
+.admin-delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-delete-btn:hover {
+  background: #cc0000;
+}
