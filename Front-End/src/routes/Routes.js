@@ -9,9 +9,9 @@ import Menu from '../pages/Menu';
 import Faq from '../pages/faq';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
-import AdminDashboard from "./admin/AdminDashboard";
-import ManageUsers from "./admin/ManageUsers";
-import ManageRecipes from "./admin/ManageRecipes";
+import AdminDashboard from "../admin/AdminDashboard";
+import ManageUsers from "../admin/ManageUsers";
+import ManageRecipes from "../admin/ManageRecipes";
 
 const AppRoutes = () => {
   return (
